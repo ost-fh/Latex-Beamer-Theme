@@ -1,0 +1,90 @@
+\mode<presentation>
+
+\setbeamertemplate{background}{
+  \ifnum \insertpagenumber=1
+    \begin{tikzpicture}
+        \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+        \node[opacity=1,inner sep=0pt] at (current page.center){
+            \includegraphics [height=\paperheight]{background.png}};
+    \end{tikzpicture}
+  \fi
+}
+
+% Title page
+\defbeamertemplate*{title page}{ost}[1][]
+{ 
+
+  % In powerpoint, a text box position refers to the top left point of the box,
+  % and with the height of the box, powerpoint then knows where the text starts.
+  % Our boxes don't have a height, so to get the same result here, we have to 
+  % do some calculations:
+  %
+  % We set the textblock reference point to bottom left using [0,1], but then
+  % we also have to adjust the vertical position from the top. So from 
+  % powerpoint, we get the position of the box, which is 13.44cm/9cm, and add 
+  % the height of the box, 3.05cm, to it. Unfortunately, this doesn't yield the
+  % correct result, so we subtract a bit to get it into the right positions.
+
+  \begin{textblock}{18.86}[0,1](13.44,\fpeval{9 + 3.05 - 0.3})
+    \begin{beamercolorbox}[sep=0pt,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+  \end{textblock}
+
+  \begin{textblock}{18.86}[0,0](13.44,12.25)
+    \begin{beamercolorbox}[sep=0pt,#1]{subtitle page header}
+      \usebeamerfont{subtitle}\insertsubtitle\par%
+    \end{beamercolorbox}%
+  \end{textblock}
+
+  \begin{textblock}{15.39}[0,0](13.44,14.84)
+    \begin{beamercolorbox}[sep=0pt,#1]{author}
+      \usebeamerfont{author}\insertauthor\par%
+    \end{beamercolorbox}%
+  \end{textblock}
+
+  \begin{textblock}{15.39}[0,0](13.44,15.67)
+    \begin{beamercolorbox}[sep=0pt,#1]{date}
+      \usebeamerfont{date}\insertdate\par%
+    \end{beamercolorbox}%
+  \end{textblock}
+
+  \begin{textblock}{15.39}[0,0](13.44,17.22)
+    \begin{beamercolorbox}[sep=0pt,#1]{institute}
+      \usebeamerfont{institute}\insertinstitute\par%
+    \end{beamercolorbox}%
+  \end{textblock}
+}
+
+% Items
+\setbeamertemplate{sections/subsections in toc}[round]
+
+
+% https://texwelt.de/fragen/11209/wie-passe-ich-das-circle-aufzahlungszeichen-in-der-beamerklasse-an
+\newcommand\centerbox[1]{$\vcenter{\hbox{#1}}$}
+
+\defbeamertemplate*{itemize item}{ost circle}[1]{%
+\centerbox{\tikz\draw[color=OstDark2,fill=OstDark2] (0,0) circle (0.2ex);}}
+
+\defbeamertemplate*{itemize subitem}{black circle}[1]{%
+  \centerbox{\tikz\draw[color=OstDark1,fill=OstDark1] (0,0) circle (0.15ex);}}
+
+\defbeamertemplate*{itemize subsubitem}{n-dash}[1]{--}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{0.5ex}% separation for first level
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{0.5ex}% separation for second level
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{0.5ex}% separation for third level
+   \fi\fi\fi\def\makelabel
+  }
+ {}
+ {}
+
+\mode
+<all>

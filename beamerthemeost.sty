@@ -1,0 +1,64 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+\geometry{paperwidth=33.88cm, paperheight=19.05cm}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{anyfontsize}
+\setlength{\TPHorizModule}{10mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+
+\usepackage{calc}
+\usepackage{xfp}
+\usepackage{xpatch}
+
+% Settings
+\useinnertheme{ost}
+\useoutertheme{ost}
+\usecolortheme{ost}
+\usefonttheme{ost}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamersize{text margin left=2.24cm}
+\setbeamersize{text margin right=0.94cm}
+
+\setlength{\parskip}{0.8\baselineskip} 
+\setlength{\parindent}{0pt}
+
+\setlength{\leftmargini}{0.94cm}
+\setlength{\leftmarginii}{0.94cm}
+\setlength{\leftmarginiii}{0.94cm}
+
+\usepackage{listings}
+\lstset{%
+  language=[LaTeX]{TeX},
+  basicstyle=\ttfamily,
+  keywordstyle=\color{OstDark2}\bfseries,
+  commentstyle=\color{OstAccent1},
+  stringstyle=\color{OstAccent3},
+  backgroundcolor=\color{OstLight1},
+  numbers=none,
+  numberstyle=\tiny\ttfamily,
+  stepnumber=2,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=tb,
+  framerule=0pt,
+  tabsize=2,
+  rulesep=5em,
+  captionpos=b,
+  breaklines=true,
+  breakatwhitespace=false,
+  framexleftmargin=1em,
+  framexrightmargin=0em,
+  framextopmargin=0em,
+  framexbottommargin=0em, 
+  aboveskip=1em,
+}
+\lstMakeShortInline|
+
+\mode<all>

@@ -1,0 +1,60 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{ost}[1][]
+{
+  \leavevmode
+  \ifnum \insertpagenumber=1
+  \else
+    \begin{textblock}{30.7}[0,0](2.24,0.93)
+      \begin{beamercolorbox}[sep=0pt]{framesubtitle}
+        \usebeamerfont{framesubtitle}\insertframesubtitle\par%
+      \end{beamercolorbox}%
+    \end{textblock}
+
+    \begin{textblock}{30.7}[0,0](2.24,2.26)
+      \begin{beamercolorbox}[sep=0pt]{frametitle}
+        \usebeamerfont{frametitle}\insertframetitle\par%
+      \end{beamercolorbox}%
+    \end{textblock}
+  \fi
+  \vspace{2cm}
+}
+
+\defbeamertemplate*{footline}{ost}
+{
+  \leavevmode
+  \ifnum \insertpagenumber=1
+  \else
+    \begin{textblock}{33.88}[0,0](0,17.93)
+      \begin{tikzpicture}
+        \useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.12);
+        \path [fill=OstDark2] (2.14,0) rectangle (2.24,1.12); 
+      \end{tikzpicture}
+    \end{textblock}
+
+    \begin{textblock}{14.9}[0,0](\fpeval{2.24 + 0.3},17.93)
+      \begin{beamercolorbox}[sep=0pt]{title in head/foot}
+        \usebeamerfont{title in head/foot}\insertshorttitle\par%
+      \end{beamercolorbox}%
+    \end{textblock}
+
+    \begin{textblock}{\fpeval{1.49 - 0.3}}[0,0](0.75,17.93)
+      \begin{beamercolorbox}[sep=0pt]{framenumber}
+        \usebeamerfont{framenumber}\hfill\insertframenumber\par%
+      \end{beamercolorbox}%
+    \end{textblock}
+    
+    \begin{textblock}{9.38}[0,0](18.04,17.93)
+      \begin{beamercolorbox}[sep=0pt]{date}
+        \usebeamerfont{date}\insertshortdate\par%
+      \end{beamercolorbox}%
+    \end{textblock}
+
+    \begin{textblock}{3.72}[0,0](29.88,17.35)
+      \includegraphics [height=1.75cm]{logo.pdf}
+    \end{textblock}
+  \fi
+}
+
+\mode<all>
