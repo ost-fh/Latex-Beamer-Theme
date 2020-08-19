@@ -1,20 +1,22 @@
 \mode<presentation>
 
-% Requirement
 \RequirePackage{tikz}
-
 \geometry{paperwidth=33.88cm, paperheight=19.05cm}
 
-\usepackage[absolute,overlay]{textpos}
-\usepackage{anyfontsize}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{anyfontsize}
 \setlength{\TPHorizModule}{10mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 
-\usepackage{calc}
-\usepackage{xfp}
-\usepackage{xpatch}
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=OstHyperlink}
 
-% Settings
+\RequirePackage{calc}
+\RequirePackage{xfp}
+\RequirePackage{xpatch}
+
 \useinnertheme{ost}
 \useoutertheme{ost}
 \usecolortheme{ost}
@@ -32,7 +34,7 @@
 \setlength{\leftmarginii}{0.94cm}
 \setlength{\leftmarginiii}{0.94cm}
 
-\usepackage{listings}
+\RequirePackage{listings}
 \lstset{%
   language=[LaTeX]{TeX},
   basicstyle=\ttfamily,
