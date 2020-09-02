@@ -1,6 +1,6 @@
 # OST Latex Beamer Theme
 
-Diese Vorlage wurde für die Verwendung mit XeLatex entwickelt. Ein Beispiel findet sich unter [example](./example).
+Diese Vorlage wurde für die Verwendung mit XeLatex entwickelt. Ein Beispiel findet sich unter [example-latex](./example-latex). Unter [example-markdown](./example-markdown) finden Sie ein Beispiel wie Sie Präsentationen in Markdown (via [Pandoc](https://pandoc.org/)) erstellen können.
 
 ## Installation
 
@@ -8,7 +8,15 @@ Kopieren Sie den Inhalt des [theme](./theme) Ordners an einen geeigneten Ort im 
 
 ## Anwendung
 
-In [example](./example) können Sie mittels `xelatex ost-example.tex` die Beispielpräsentation erstellen.
+In [example-latex](./example-latex) können Sie mit folgendem Befehl die Beispielpräsentation erstellen:
+
+`xelatex ost-example.tex`
+
+In [example-markdown](./example-markdown) können Sie die selbe Beispielpräsentation aus der Markdown-Datei [ost-example.md](./example-markdown/ost-example.md) mit folgendem Befehl erstellen ([Pandoc](https://pandoc.org/) erforderlich):
+
+`pandoc -t beamer --pdf-engine=xelatex --template template.latex ost-example.md -s -o ost-example.pdf`
+
+_Hinweis: Framesubtitle's sind via Markdown nicht unterstützt._
 
 ## Anpassungen
 
