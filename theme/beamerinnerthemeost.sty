@@ -61,13 +61,13 @@
 
 
 % https://texwelt.de/fragen/11209/wie-passe-ich-das-circle-aufzahlungszeichen-in-der-beamerklasse-an
-\newcommand\centerbox[1]{$\vcenter{\hbox{#1}}$}
+\newcommand\ost@beamer@centerbox[1]{$\vcenter{\hbox{#1}}$}
 
 \defbeamertemplate*{itemize item}{ost circle}[1]{%
-\centerbox{\tikz\draw[color=OstDark2,fill=OstDark2] (0,0) circle (0.2ex);}}
+\ost@beamer@centerbox{\tikz\draw[color=OstDark2,fill=OstDark2] (0,0) circle (0.2ex);}}
 
 \defbeamertemplate*{itemize subitem}{black circle}[1]{%
-  \centerbox{\tikz\draw[color=OstDark1,fill=OstDark1] (0,0) circle (0.15ex);}}
+  \ost@beamer@centerbox{\tikz\draw[color=OstDark1,fill=OstDark1] (0,0) circle (0.15ex);}}
 
 \defbeamertemplate*{itemize subsubitem}{n-dash}[1]{--}
 
