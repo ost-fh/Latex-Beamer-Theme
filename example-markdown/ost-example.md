@@ -22,4 +22,4 @@ Dies ist ein Beispiel für die Verwendung des OST Latex Beamer Themes.
    - Und so weiter
 
 
-Das Design ist an die OST Powerpoint Vorlage angelehnt, weitere Verbesserungen nehmen wir sehr gerne unter [github.com/ost-fh/Latex-Beamer-Theme](https://github.com/ost-fh/Latex-Beamer-Theme) entgegen.
+Das Design ist an die OST Powerpoint Vorlage angelehnt.^[Weitere Verbesserungen nehmen wir sehr gerne unter [github.com/ost-fh/Latex-Beamer-Theme](https://github.com/ost-fh/Latex-Beamer-Theme) entgegen.]
