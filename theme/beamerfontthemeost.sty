@@ -1,16 +1,21 @@
 \mode<presentation>
 
-\setbeamerfont*{title}{family={\fontspec{Arial}},series=\bfseries,size={\fontsize{32}{36}}}
-\setbeamerfont*{subtitle}{family={\fontspec{Arial}},series=\bfseries,size={\fontsize{20}{24}}}
-\setbeamerfont*{author}{family={\fontspec{Arial}},size={\fontsize{12}{14}}}
-\setbeamerfont*{title in head/foot}{family={\fontspec{Arial}},size={\fontsize{12}{14}}}
-\setbeamerfont*{institute}{family={\fontspec{Arial}},size={\fontsize{12}{14}}}
-\setbeamerfont*{date}{family={\fontspec{Arial}},size={\fontsize{12}{14}}}
-\setbeamerfont*{framenumber}{family={\fontspec{Arial}},size={\fontsize{12}{14}}}
-\setbeamerfont*{normal text}{family={\fontspec{Arial}},size={\fontsize{20}{24}}}
-\setbeamerfont*{frametitle}{family={\fontspec{Arial}},series=\bfseries,size={\fontsize{32}{32}}}
-\setbeamerfont*{framesubtitle}{family={\fontspec{Arial}},series=\bfseries,size={\fontsize{20}{20}}}
-\setbeamerfont*{caption}{series=\fontspec{Arial}}
+% Windows and Mac
+%\newcommand{\ostmainfont}{Liberation Sans}
+% FOSS
+\newcommand{\ostmainfont}{Liberation Sans}
+
+\setbeamerfont*{title}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{32}{36}}}
+\setbeamerfont*{subtitle}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{20}{24}}}
+\setbeamerfont*{author}{family={\fontspec{\ostmainfont}},size={\fontsize{12}{14}}}
+\setbeamerfont*{title in head/foot}{family={\fontspec{\ostmainfont}},size={\fontsize{12}{14}}}
+\setbeamerfont*{institute}{family={\fontspec{\ostmainfont}},size={\fontsize{12}{14}}}
+\setbeamerfont*{date}{family={\fontspec{\ostmainfont}},size={\fontsize{12}{14}}}
+\setbeamerfont*{framenumber}{family={\fontspec{\ostmainfont}},size={\fontsize{12}{14}}}
+\setbeamerfont*{normal text}{family={\fontspec{\ostmainfont}},size={\fontsize{20}{24}}}
+\setbeamerfont*{frametitle}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{32}{32}}}
+\setbeamerfont*{framesubtitle}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{20}{20}}}
+\setbeamerfont*{caption}{series=\fontspec{\ostmainfont}}
 
 \setbeamerfont*{itemize/enumerate body}{size=\fontsize{20}{24}}
 \setbeamerfont*{itemize/enumerate subbody}{parent=itemize/enumerate body}
@@ -18,8 +23,8 @@
 
 \AtBeginDocument{\usebeamerfont*{normal text}}
 
-\setmainfont{Arial}
-\setsansfont{Arial}
+\setmainfont{\ostmainfont}
+\setsansfont{\ostmainfont}
 \setmonofont{Courier New}
 
 \mode
