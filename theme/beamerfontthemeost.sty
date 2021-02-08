@@ -1,11 +1,17 @@
 \mode<presentation>
 
-% Windows and Mac
-%\newcommand{\ostmainfont}{Arial}
-%\newcommand{\ostmonofont}{Courier New}
-% FOSS
-\newcommand{\ostmainfont}{Liberation Sans}
-\newcommand{\ostmonofont}{Nimbus Mono PS}
+\usepackage{fontspec}
+\IfFontExistsTF{Arial}{
+    \newcommand{\ostmainfont}{Arial}
+} {
+    \newcommand{\ostmainfont}{Liberation Sans}
+}
+\IfFontExistsTF{Courier New}{
+    \newcommand{\ostmonofont}{Courier New}
+} {
+    \newcommand{\ostmonofont}{Nimbus Mono PS}
+}
+
 
 \setbeamerfont*{title}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{32}{36}}}
 \setbeamerfont*{subtitle}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{20}{24}}}
