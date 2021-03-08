@@ -1,16 +1,7 @@
 \mode<presentation>
 
-\usepackage{fontspec}
-\IfFontExistsTF{Arial}{
-    \newcommand{\ostmainfont}{Arial}
-} {
-    \newcommand{\ostmainfont}{Liberation Sans}
-}
-\IfFontExistsTF{Courier New}{
-    \newcommand{\ostmonofont}{Courier New}
-} {
-    \newcommand{\ostmonofont}{Nimbus Mono PS}
-}
+\newcommand{\ostmainfont}{Liberation Sans}
+\newcommand{\ostmonofont}{Nimbus Mono PS}
 
 
 \setbeamerfont*{title}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{32}{36}}}
