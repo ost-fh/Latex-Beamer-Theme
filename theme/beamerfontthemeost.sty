@@ -1,7 +1,15 @@
 \mode<presentation>
 
 \newcommand{\ostmainfont}{Liberation Sans}
-\newcommand{\ostmonofont}{Nimbus Mono PS}
+
+\IfFontExistsTF{Nimbus Mono L}{
+    \newcommand{\ostmonofont}{Nimbus Mono L}
+}
+{
+    \IfFontExistsTF{Nimbus Mono PS}{
+        \newcommand{\ostmonofont}{Nimbus Mono PS}
+    }
+}
 
 
 \setbeamerfont*{title}{family={\fontspec{\ostmainfont}},series=\bfseries,size={\fontsize{32}{36}}}
