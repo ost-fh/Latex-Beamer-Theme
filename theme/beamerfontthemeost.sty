@@ -1,13 +1,24 @@
 \mode<presentation>
 
-\newcommand{\ostmainfont}{Liberation Sans}
-
-\IfFontExistsTF{Nimbus Mono L}{
-    \newcommand{\ostmonofont}{Nimbus Mono L}
+\IfFontExistsTF{Arial}
+{
+    \newcommand{\ostmainfont}{Arial}
 }
 {
-    \IfFontExistsTF{Nimbus Mono PS}{
-        \newcommand{\ostmonofont}{Nimbus Mono PS}
+    \newcommand{\ostmainfont}{Liberation Sans}
+}
+
+\IfFontExistsTF{Courier New}
+{
+    \newcommand{\ostmonofont}{Courier New}
+}
+{
+    \IfFontExistsTF{Nimbus Mono L}
+    {
+        \newcommand{\ostmonofont}{Nimbus Mono L}
+    }
+    {
+        \newcommand{\ostmonofont}{zco}
     }
 }
 
