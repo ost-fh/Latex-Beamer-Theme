@@ -40,4 +40,13 @@ Um hier beispielsweise den Autor anzuzeigen, genügt folgende Anpassung:
 \end{textblock}
 ```
 
+## Englisch oder Deutsches Hintergundbild
+
+Das Template unterstützt eine Deutsche oder Englisches Hintergundsbild auf der Titelseite. Um das deutsche Bild darzustellen, muss vor dem import des Templates die Sprache auf Deutsch gestellt werden.
+
+```latex
+\selectlanguage{german}
+\usetheme{ost}
+```
+
 Feedback und Änderungsvorschläge nehmen wir sehr gerne entgegen, entweder per Issue oder noch besser direkt mit einem Pull Request.
